@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.decorative-line {
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+/* Seção do gráfico */
+#graficodafuncao {
+    text-align: center;
+    color: #34495e;
+    margin: 20px 0 10px 0;
+    font-size: 1.3em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+form {
+    margin-bottom: 30px;
+}
+
+#show-intervalo-atual {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-section {
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+}
+
+.input-section legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.input-group input:invalid {
+    border-color: #e74c3c;
+}
+
+#executar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+#executar:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-2px);
+}
+
+#executar:active {
+    transform: translateY(0);
+}
+
+
+.message-container {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    background-color: #ecf0f1;
+    min-height: 20px; 
+}
+
+.message-container p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.message-container strong {
+    color: #2c3e50;
+}
+
+.message-container:has(p:contains("raiz")) {
+    border-left-color: #27ae60; 
+    background-color: #d5f4e6;
+}
+
+.message-container:has(p:contains("não existe")) {
+    border-left-color: #e74c3c; 
+    background-color: #fdf2f2;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    #graficodafuncao {
+        font-size: 1.1em;
+    }
+    
+    #executar {
+        font-size: 1em;
+    }
+}

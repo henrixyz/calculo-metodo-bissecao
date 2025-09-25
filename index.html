@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes em Intervalos de Funções Contínuas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Programa para Encontrar Raiz: x² - cos(x) - 2 = 0</h1>
+        <div class="decorative-line"></div>
+        
+        <h3 id="graficodafuncao">Gráfico da função</h3>
+        <img src="img/funcao.png" alt="Gráfico da função f(x) = x² - cos(x) - 2">
+        
+        <form>
+            <h3 id="show-intervalo-atual">Intervalo atual: (1, 2)</h3>
+            
+            <fieldset class="input-section">
+                <legend>Defina o intervalo [a, b]</legend>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="a">1° valor (a)</label>
+                        <input type="number" name="a" id="a" value="1" step="0.1" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="b">2° valor (b)</label>
+                        <input type="number" name="b" id="b" value="2" step="0.1" required autocomplete="off">
+                    </div>
+                </div>
+            </fieldset>
+
+            <input type="button" value="Executar Bisseção" id="executar">
+        </form>
+
+        <div id="mensagem1" class="message-container"></div>
+        <div id="mensagem2" class="message-container"></div>
+        <div id="saida" class="message-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
