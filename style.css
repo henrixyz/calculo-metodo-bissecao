@@ -7,48 +7,31 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #000000; /* Preto para texto */
-    background-color: #ffffff; /* Branco para fundo */
+    color: #333;
+    background-color: #f4f4f4;
     padding: 20px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* Branco */
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra preta sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Cabeçalho */
-.header-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Espaça os elementos: imagem esquerda, h1 no meio, imagem direita */
-    gap: 15px;
-    margin-bottom: 10px;
-    padding: 0 20px; /* Adiciona padding para melhor espaçamento */
-}
-
 h1 {
     text-align: center;
-    color: #000000; /* Preto */
-    margin: 0;
+    color: #2c3e50;
+    margin-bottom: 10px;
     font-size: 1.8em;
-    flex: 1; /* Faz o h1 ocupar o espaço central */
-}
-
-.escudo-vasco {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .decorative-line {
     height: 3px;
-    background: linear-gradient(to right, #000000, #ffffff); /* Gradiente preto para branco, cores do Vasco */
+    background: linear-gradient(to right, #3498db, #2980b9);
     margin-bottom: 20px;
     border-radius: 2px;
 }
@@ -56,7 +39,7 @@ h1 {
 /* Seção do gráfico */
 #graficodafuncao {
     text-align: center;
-    color: #000000; /* Preto */
+    color: #34495e;
     margin: 20px 0 10px 0;
     font-size: 1.3em;
 }
@@ -67,7 +50,7 @@ img {
     display: block;
     margin: 0 auto 30px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra preta sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulário */
@@ -77,25 +60,25 @@ form {
 
 #show-intervalo-atual {
     text-align: center;
-    color: #000000; /* Preto */
+    color: #2c3e50;
     margin-bottom: 20px;
     font-size: 1.2em;
-    background-color: #f5f5f5; /* Cinza claro para contraste, mas próximo ao branco */
+    background-color: #ecf0f1;
     padding: 10px;
     border-radius: 5px;
 }
 
 .input-section {
-    border: 2px solid #000000; /* Borda preta */
+    border: 2px solid #bdc3c7;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff; /* Branco */
+    background-color: #f8f9fa;
 }
 
 .input-section legend {
     font-weight: bold;
-    color: #000000; /* Preto */
+    color: #2c3e50;
     padding: 0 10px;
 }
 
@@ -115,35 +98,33 @@ form {
 .input-group label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #000000; /* Preto */
+    color: #34495e;
 }
 
 .input-group input {
     padding: 10px;
-    border: 2px solid #000000; /* Borda preta */
+    border: 2px solid #bdc3c7;
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s ease;
-    background-color: #ffffff; /* Fundo branco */
-    color: #000000; /* Texto preto */
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #000000; /* Mantém preto no foco */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra preta */
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
 .input-group input:invalid {
-    border-color: #000000; /* Preto mesmo em inválido, para manter tema */
+    border-color: #e74c3c;
 }
 
 #executar {
     display: block;
     width: 100%;
     padding: 12px;
-    background: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
-    color: #ffffff; /* Texto branco */
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
@@ -154,7 +135,7 @@ form {
 }
 
 #executar:hover {
-    background: linear-gradient(to right, #333333, #000000); /* Inverte gradiente no hover */
+    background: linear-gradient(to right, #2980b9, #3498db);
     transform: translateY(-2px);
 }
 
@@ -162,12 +143,13 @@ form {
     transform: translateY(0);
 }
 
+
 .message-container {
     margin: 15px 0;
     padding: 15px;
     border-radius: 5px;
-    border-left: 4px solid #000000; /* Borda preta */
-    background-color: #f5f5f5; /* Cinza claro para contraste */
+    border-left: 4px solid #3498db;
+    background-color: #ecf0f1;
     min-height: 20px; 
 }
 
@@ -175,52 +157,20 @@ form {
     margin: 0;
     font-size: 1em;
     line-height: 1.4;
-    color: #000000; /* Preto */
 }
 
 .message-container strong {
-    color: #000000; /* Preto */
+    color: #2c3e50;
 }
 
 .message-container:has(p:contains("raiz")) {
-    border-left-color: #000000; /* Preto para sucesso */
-    background-color: #ffffff; /* Branco */
+    border-left-color: #27ae60; 
+    background-color: #d5f4e6;
 }
 
 .message-container:has(p:contains("não existe")) {
-    border-left-color: #000000; /* Preto para erro também */
-    background-color: #f5f5f5; /* Cinza claro */
-}
-
-/* Estilo para o botão de áudio */
-.audio-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
-    color: #ffffff; /* Texto branco */
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    margin-top: 10px;
-}
-
-.audio-button:hover {
-    background: linear-gradient(to right, #333333, #000000); /* Inverte gradiente no hover */
-    transform: translateY(-2px);
-}
-
-.audio-button:active {
-    transform: translateY(0);
-}
-
-#audio-section {
-    text-align: center;
-    background-color: #ffffff; /* Fundo branco para destaque */
-    border-left-color: #000000;
+    border-left-color: #e74c3c; 
+    background-color: #fdf2f2;
 }
 
 @media (max-width: 600px) {
@@ -230,17 +180,6 @@ form {
     
     .container {
         padding: 20px;
-    }
-    
-    .header-section {
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center; /* Centraliza na coluna para mobile */
-        padding: 0;
-    }
-    
-    .escudo-vasco {
-        width: 40px;
     }
     
     .input-row {
@@ -257,10 +196,6 @@ form {
     }
     
     #executar {
-        font-size: 1em;
-    }
-    
-    .audio-button {
         font-size: 1em;
     }
 }
